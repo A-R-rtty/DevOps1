@@ -1,13 +1,13 @@
-package com.example.DevOps1;
+package cl.inovatech.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DevOps1Application {
+public class BackendApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DevOps1Application.class, args);
+		SpringApplication.run(BackendApplication.class, args);
 	}
 
 }

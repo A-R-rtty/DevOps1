@@ -1,10 +1,10 @@
-package com.example.DevOps1;
+package cl.inovatech.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DevOps1ApplicationTests {
+class BackendApplicationTests {
 
 	@Test
 	void contextLoads() {
