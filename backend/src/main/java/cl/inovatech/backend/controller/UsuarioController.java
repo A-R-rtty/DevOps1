@@ -7,11 +7,23 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/usuarios")
-@CrossOrigin(origins = "*")
+@CrossOrigin("*")
 public class UsuarioController {
+    
+    private final UsuarioRepository repository;
+    
+    
+    public UsuarioController(UsuarioRepository repository) {
+        this.repository = repository;
+    }
 
     @GetMapping
-public List<String> test(){
+    public List<String> test(){
     return List.of("hola", "funciona");
-}
+    }
+    
+    public List<Usuario> getUsuario(){
+        return repository.findAll();
+    }
+    
 }
