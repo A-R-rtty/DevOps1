@@ -10,14 +10,8 @@ import java.util.List;
 @CrossOrigin(origins = "*")
 public class UsuarioController {
 
-    private final UsuarioRepository repository;
-
-    public UsuarioController(UsuarioRepository repository) {
-        this.repository = repository;
-    }
-
     @GetMapping
-    public List <Usuario> getUsuario(){
-        return repository.findAll();
-    }
+public List<String> test(){
+    return List.of("hola", "funciona");
+}
 }

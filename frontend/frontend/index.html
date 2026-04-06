@@ -1,13 +1,26 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>frontend</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Usuarios</title>
+</head>
+<body>
+
+<h1>Lista de Usuarios</h1>
+<ul id="lista"></ul>
+
+<script>
+fetch("http://localhost:8080/api/usuarios")
+    .then(res => res.json())
+    .then(data => {
+        const lista = document.getElementById("lista");
+        data.forEach(u => {
+            const li = document.createElement("li");
+            li.textContent = u.nombre;
+            lista.appendChild(li);
+        });
+    })
+    .catch(err => console.error("Error:", err));
+</script>
+
+</body>
 </html>

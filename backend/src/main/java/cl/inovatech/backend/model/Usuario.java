@@ -3,13 +3,12 @@ package cl.inovatech.backend.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="plan")
 public class Usuario {
-    
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String nombre;
 
     public Usuario() {}
