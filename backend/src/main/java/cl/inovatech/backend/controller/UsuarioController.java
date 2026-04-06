@@ -9,21 +9,15 @@ import java.util.List;
 @RequestMapping("/api/usuarios")
 @CrossOrigin("*")
 public class UsuarioController {
-    
+
     private final UsuarioRepository repository;
-    
-    
+
     public UsuarioController(UsuarioRepository repository) {
         this.repository = repository;
     }
 
     @GetMapping
-    public List<String> test(){
-    return List.of("hola", "funciona");
-    }
-    
     public List<Usuario> getUsuario(){
         return repository.findAll();
     }
-    
 }
